@@ -363,9 +363,13 @@ export async function enqueueLinks(
     let requestOptions = createRequestOptions(urls, options);
 
     if (transformRequestFunction) {
-        requestOptions = requestOptions
-            .map((request) => transformRequestFunction(request))
-            .filter((r) => !!r) as RequestOptions[];
+        const promises = requestOptions
+            .map(
+                async (request): Promise<RequestOptions | boolean | undefined | null> =>
+                    transformRequestFunction(request),
+            )
+            .filter((r) => !!r) as Promise<RequestOptions>[];
+        requestOptions = await Promise.all(promises);
     }
 
     function createFilteredRequests() {
