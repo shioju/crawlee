@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.10.6 (2024-07-10)
+
+
+### Bug Fixes
+
+* declare missing dependency on `tslib` ([27e96c8](https://github.com/apify/crawlee/commit/27e96c80c26e7fc31809a4b518d699573cb8c662)), closes [#1747](https://github.com/apify/crawlee/issues/1747)
+* handle redirect cookies ([#1521](https://github.com/apify/crawlee/issues/1521)) ([2f7fc7c](https://github.com/apify/crawlee/commit/2f7fc7cc1d27553d94a915667f0e6d2af599a80c))
+* **http-crawler:** do not hang on POST without payload ([#1546](https://github.com/apify/crawlee/issues/1546)) ([8c87390](https://github.com/apify/crawlee/commit/8c87390e0db1924f463019cc55dfc265b12db2a9))
+* **http-crawler:** replace `IncomingMessage` with `PlainResponse` for context's `response` ([#1973](https://github.com/apify/crawlee/issues/1973)) ([2a1cc7f](https://github.com/apify/crawlee/commit/2a1cc7f4f87f0b1c657759076a236a8f8d9b76ba)), closes [#1964](https://github.com/apify/crawlee/issues/1964)
+* injectJQuery in context does not survive navs ([#1661](https://github.com/apify/crawlee/issues/1661)) ([493a7cf](https://github.com/apify/crawlee/commit/493a7cff569cb12cfd9aa5e0f4fcb9de686eb41f))
+* **jsdom:** use no-op `enqueueLinks` in http crawlers when parsing fails ([fd35270](https://github.com/apify/crawlee/commit/fd35270e7da67a77eb60108e19294f0fd2016706))
+* log original error message on session rotation ([#2022](https://github.com/apify/crawlee/issues/2022)) ([8a11ffb](https://github.com/apify/crawlee/commit/8a11ffbdaef6b2fe8603aac570c3038f84c2f203))
+* make `CheerioCrawlerOptions` type more loose ([d871d8c](https://github.com/apify/crawlee/commit/d871d8caf22bc8d8ca1041e4975f3c95eae4b487))
+* make `crawler.log` publicly accessible ([#2526](https://github.com/apify/crawlee/issues/2526)) ([3e9e665](https://github.com/apify/crawlee/commit/3e9e6652c0b5e4d0c2707985abbad7d80336b9af))
+* mark `context.request.loadedUrl` and `id` as required inside the request handler ([#2531](https://github.com/apify/crawlee/issues/2531)) ([2b54660](https://github.com/apify/crawlee/commit/2b546600691d84852a2f9ef42f273cecf818d66d))
+* pin all internal dependencies ([#2041](https://github.com/apify/crawlee/issues/2041)) ([d6f2b17](https://github.com/apify/crawlee/commit/d6f2b172d4a6776137c7893ca798d5b4a9408e79)), closes [#2040](https://github.com/apify/crawlee/issues/2040)
+* retry incorrect Content-Type when response has blocked status code ([#2176](https://github.com/apify/crawlee/issues/2176)) ([b54fb8b](https://github.com/apify/crawlee/commit/b54fb8bb7bc3575195ee676d21e5feb8f898ef47)), closes [#1994](https://github.com/apify/crawlee/issues/1994)
+* support `DELETE` requests in `HttpCrawler` ([#2039](https://github.com/apify/crawlee/issues/2039)) ([7ea5c41](https://github.com/apify/crawlee/commit/7ea5c4185b169ec933dcd8df2e85824a7e452913)), closes [#1658](https://github.com/apify/crawlee/issues/1658)
+* support TypeScript 4.8 ([#1507](https://github.com/apify/crawlee/issues/1507)) ([4c3a504](https://github.com/apify/crawlee/commit/4c3a5045931a7f270bf8eda8a6417466b32fc99b))
+
+
+### Features
+
+* `tieredProxyUrls` for ProxyConfiguration ([#2348](https://github.com/apify/crawlee/issues/2348)) ([5408c7f](https://github.com/apify/crawlee/commit/5408c7f60a5bf4dbdba92f2d7440e0946b94ea6e))
+* add `FileDownload` "crawler" ([#2435](https://github.com/apify/crawlee/issues/2435)) ([d73756b](https://github.com/apify/crawlee/commit/d73756bb225d9ed8f58cf0a3b2e0ce96f6188863))
+* add `waitForSelector` context helper + `parseWithCheerio` in adaptive crawler ([#2522](https://github.com/apify/crawlee/issues/2522)) ([6f88e73](https://github.com/apify/crawlee/commit/6f88e738d43ab4774dc4ef3f78775a5d88728e0d))
+* Add options for custom HTTP error status codes ([#2035](https://github.com/apify/crawlee/issues/2035)) ([b50ef1a](https://github.com/apify/crawlee/commit/b50ef1ad51d6d7c7a71e7f40efdb2b1ef0f09291)), closes [#1711](https://github.com/apify/crawlee/issues/1711)
+* check enqueue link strategy post redirect ([#2238](https://github.com/apify/crawlee/issues/2238)) ([3c5f9d6](https://github.com/apify/crawlee/commit/3c5f9d6056158e042e12d75b2b1b21ef6c32e618)), closes [#2173](https://github.com/apify/crawlee/issues/2173)
+* error tracker ([#1467](https://github.com/apify/crawlee/issues/1467)) ([6bfe1ce](https://github.com/apify/crawlee/commit/6bfe1ce0161f1e26f97e2b8e5c02ec9ca608fe30))
+* got-scraping v4 ([#2110](https://github.com/apify/crawlee/issues/2110)) ([2f05ed2](https://github.com/apify/crawlee/commit/2f05ed22b203f688095300400bb0e6d03a03283c))
+* http-crawler ([#1440](https://github.com/apify/crawlee/issues/1440)) ([8c303f7](https://github.com/apify/crawlee/commit/8c303f7fd718b217cea3108409b6092711d1183b))
+* **HttpCrawler:** add `parseWithCheerio` helper to `HttpCrawler` ([#1906](https://github.com/apify/crawlee/issues/1906)) ([ff5f76f](https://github.com/apify/crawlee/commit/ff5f76f9336c47c555c28038cdc72dc650bb5065))
+* log cause with `retryOnBlocked` ([#2252](https://github.com/apify/crawlee/issues/2252)) ([e19a773](https://github.com/apify/crawlee/commit/e19a773693cfc5e65c1e2321bfc8b73c9844ea8b)), closes [#2249](https://github.com/apify/crawlee/issues/2249)
+* retire session on proxy error ([#2002](https://github.com/apify/crawlee/issues/2002)) ([8c0928b](https://github.com/apify/crawlee/commit/8c0928b24ceabefc454f8114ac30a27023709010)), closes [#1912](https://github.com/apify/crawlee/issues/1912)
+* retryOnBlocked detects blocked webpage ([#1956](https://github.com/apify/crawlee/issues/1956)) ([766fa9b](https://github.com/apify/crawlee/commit/766fa9b88029e9243a7427075384c1abe85c70c8))
+* **router:** allow inline router definition ([#1877](https://github.com/apify/crawlee/issues/1877)) ([2d241c9](https://github.com/apify/crawlee/commit/2d241c9f88964ebd41a181069c378b6b7b5bf262))
+
+
+### Reverts
+
+* Revert "chore(release): v3.1.0" ([762d345](https://github.com/apify/crawlee/commit/762d345b48f3c308e574541e5737fe7423d55238))
+
+
+
+
+
 ## [3.10.5](https://github.com/apify/crawlee/compare/v3.10.4...v3.10.5) (2024-06-12)
 
 

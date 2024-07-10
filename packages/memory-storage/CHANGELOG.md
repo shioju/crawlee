@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.10.6 (2024-07-10)
+
+
+### Bug Fixes
+
+* `enqueueLinks` should respect full URL of the current request for relative link resolution ([#1427](https://github.com/apify/crawlee/issues/1427)) ([e72d02c](https://github.com/apify/crawlee/commit/e72d02c1e7c4d871914956d3e5c025b1a82ce12c))
+* cleanup worker stuff from memory storage to fix `vitest` ([#2004](https://github.com/apify/crawlee/issues/2004)) ([d2e098c](https://github.com/apify/crawlee/commit/d2e098cab62c700a5c58fcf43a5bcf9f492d71ec)), closes [#1999](https://github.com/apify/crawlee/issues/1999)
+* Correctly compute `pendingRequestCount` in request queue ([#1765](https://github.com/apify/crawlee/issues/1765)) ([946535f](https://github.com/apify/crawlee/commit/946535f2338086e13c71ff70129e7a1f6bfd275d)), closes [/github.com/apify/crawlee/blob/master/packages/memory-storage/src/resource-clients/request-queue.ts#L291-L298](https://github.com//github.com/apify/crawlee/blob/master/packages/memory-storage/src/resource-clients/request-queue.ts/issues/L291-L298)
+* Fixed double extension for screenshots ([#2419](https://github.com/apify/crawlee/issues/2419)) ([e8b39c4](https://github.com/apify/crawlee/commit/e8b39c41764726280c995e52fa7d79a9240d993e)), closes [#1980](https://github.com/apify/crawlee/issues/1980)
+* improve file saving on memory storage ([#1421](https://github.com/apify/crawlee/issues/1421)) ([75dc4bd](https://github.com/apify/crawlee/commit/75dc4bd633a8263c4e748a4fec7b4e820ce0f772))
+* improve fix for double extension in KVS with HTML files ([#2505](https://github.com/apify/crawlee/issues/2505)) ([157927d](https://github.com/apify/crawlee/commit/157927d67f42342c20fdf01ef81bdafd7095f0b8)), closes [#2419](https://github.com/apify/crawlee/issues/2419)
+* key value stores emitting an error when multiple write promises ran in parallel ([#1460](https://github.com/apify/crawlee/issues/1460)) ([f201cca](https://github.com/apify/crawlee/commit/f201cca4a99d1c8b3e87be0289d5b3b363048f09))
+* **KeyValueStore:** big buffers should not crash ([#1734](https://github.com/apify/crawlee/issues/1734)) ([2f682f7](https://github.com/apify/crawlee/commit/2f682f7ddd189cad11a3f5e7655ac6243444ff74)), closes [#1732](https://github.com/apify/crawlee/issues/1732) [#1710](https://github.com/apify/crawlee/issues/1710)
+* **memory-storage:** dont fail when storage already purged ([#1737](https://github.com/apify/crawlee/issues/1737)) ([8694027](https://github.com/apify/crawlee/commit/86940273dbac2d13294140962f816f66582684ff)), closes [#1736](https://github.com/apify/crawlee/issues/1736)
+* **MemoryStorage:** cache requests in `RequestQueue` ([#1899](https://github.com/apify/crawlee/issues/1899)) ([063dcd1](https://github.com/apify/crawlee/commit/063dcd1c9e6652cd316cc0e8c4f4e4bbb70c246e))
+* **MemoryStorage:** correctly respect the desc option ([#1666](https://github.com/apify/crawlee/issues/1666)) ([b5f37f6](https://github.com/apify/crawlee/commit/b5f37f66a50b2d546eca24a699cf92cb683b7026))
+* **MemoryStorage:** handle EXDEV errors when purging storages ([#1932](https://github.com/apify/crawlee/issues/1932)) ([e656050](https://github.com/apify/crawlee/commit/e6560507243f5e2d0b126160616573f13e5998e1))
+* **MemoryStorage:** handling of readable streams for key-value stores when setting records ([#1852](https://github.com/apify/crawlee/issues/1852)) ([a5ee37d](https://github.com/apify/crawlee/commit/a5ee37d7e245f004785fc03220e37aeafdfa0e81)), closes [#1843](https://github.com/apify/crawlee/issues/1843)
+* **MemoryStorage:** ignore invalid files for request queues ([#2132](https://github.com/apify/crawlee/issues/2132)) ([fa58581](https://github.com/apify/crawlee/commit/fa58581b530ef3ad89bdd71403df2d2e4f06c59f)), closes [#1985](https://github.com/apify/crawlee/issues/1985)
+* **MemoryStorage:** lock request JSON file when reading to support multiple process crawling ([#2215](https://github.com/apify/crawlee/issues/2215)) ([eb84ce9](https://github.com/apify/crawlee/commit/eb84ce9ce5540b72d5799b1f66c80938d57bc1cc))
+* **MemoryStorage:** request queues race conditions causing crashes ([#1806](https://github.com/apify/crawlee/issues/1806)) ([083a9db](https://github.com/apify/crawlee/commit/083a9db9ebcddd3fa886631234c790d4c5bcdf86)), closes [#1792](https://github.com/apify/crawlee/issues/1792)
+* **MemoryStorage:** request queues saved in the wrong place ([#1779](https://github.com/apify/crawlee/issues/1779)) ([19409db](https://github.com/apify/crawlee/commit/19409dbd614560a73c97ef6e00997e482573d2ff))
+* **MemoryStorage:** RequestQueue should respect `forefront` ([#1816](https://github.com/apify/crawlee/issues/1816)) ([b68e86a](https://github.com/apify/crawlee/commit/b68e86a97954bcbe30fde802fed5f263016fffe2)), closes [#1787](https://github.com/apify/crawlee/issues/1787)
+* **MemoryStorage:** RequestQueue#handledRequestCount should update ([#1817](https://github.com/apify/crawlee/issues/1817)) ([a775e4a](https://github.com/apify/crawlee/commit/a775e4afea20d0b31492f44b90f61b6a903491b6)), closes [#1764](https://github.com/apify/crawlee/issues/1764)
+* pin all internal dependencies ([#2041](https://github.com/apify/crawlee/issues/2041)) ([d6f2b17](https://github.com/apify/crawlee/commit/d6f2b172d4a6776137c7893ca798d5b4a9408e79)), closes [#2040](https://github.com/apify/crawlee/issues/2040)
+* rename default storage folder to just `storage` ([#1403](https://github.com/apify/crawlee/issues/1403)) ([c253985](https://github.com/apify/crawlee/commit/c253985e534b5106ffa5bd8d214afae2eb34de58))
+* **utils:** add missing dependency on `ow` ([bf0e03c](https://github.com/apify/crawlee/commit/bf0e03cc6ddc103c9337de5cd8dce9bc86c369a3)), closes [#1716](https://github.com/apify/crawlee/issues/1716)
+
+
+### Features
+
+* `KeyValueStore.recordExists()` ([#2339](https://github.com/apify/crawlee/issues/2339)) ([8507a65](https://github.com/apify/crawlee/commit/8507a65d1ad079f64c752a6ddb1d8fac9b494228))
+* add basic support for `setStatusMessage` ([#1790](https://github.com/apify/crawlee/issues/1790)) ([c318980](https://github.com/apify/crawlee/commit/c318980ec11d211b1a5c9e6bdbe76198c5d895be))
+* allow disabling storage persistence ([#1539](https://github.com/apify/crawlee/issues/1539)) ([f65e3c6](https://github.com/apify/crawlee/commit/f65e3c6a7e1efc02fac5f32046bb27da5a1c8e78))
+* initial crawlee commit ([#1384](https://github.com/apify/crawlee/issues/1384)) ([3a59bfc](https://github.com/apify/crawlee/commit/3a59bfc0b7199b2742478dd0f8bee80d3a62f3d3))
+* **MemoryStorage:** read from fs if persistStorage is enabled, ram only otherwise ([#1761](https://github.com/apify/crawlee/issues/1761)) ([e903980](https://github.com/apify/crawlee/commit/e9039809a0c0af0bc086be1f1400d18aa45ae490))
+* move the status message implementation to Crawlee, noop in storage ([#1808](https://github.com/apify/crawlee/issues/1808)) ([99c3fdc](https://github.com/apify/crawlee/commit/99c3fdc18030b7898e6b6d149d6d94fab7881f09))
+* Request Queue v2 ([#1975](https://github.com/apify/crawlee/issues/1975)) ([70a77ee](https://github.com/apify/crawlee/commit/70a77ee15f984e9ae67cd584fc58ace7e55346db)), closes [#1365](https://github.com/apify/crawlee/issues/1365)
+* RQv2 memory storage support ([#1874](https://github.com/apify/crawlee/issues/1874)) ([049486b](https://github.com/apify/crawlee/commit/049486b772cc2accd2d2d226d8c8726e5ab933a9))
+* use JSON5 for INPUT.json ([#1538](https://github.com/apify/crawlee/issues/1538)) ([09133ff](https://github.com/apify/crawlee/commit/09133ffa744436b60fc452b4f97caf1a18ebfced))
+
+
+### Reverts
+
+* Revert "chore(release): v3.1.0" ([762d345](https://github.com/apify/crawlee/commit/762d345b48f3c308e574541e5737fe7423d55238))
+
+
+
+
+
 ## [3.10.5](https://github.com/apify/crawlee/compare/v3.10.4...v3.10.5) (2024-06-12)
 
 **Note:** Version bump only for package @crawlee/memory-storage

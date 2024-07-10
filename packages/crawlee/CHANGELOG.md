@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.10.6 (2024-07-10)
+
+
+### Bug Fixes
+
+* allow to use any version of puppeteer or playwright ([#2102](https://github.com/apify/crawlee/issues/2102)) ([0cafceb](https://github.com/apify/crawlee/commit/0cafceb2966d430dd1b2a1b619fe66da1c951f4c)), closes [#2101](https://github.com/apify/crawlee/issues/2101)
+* declare missing dependency on `tslib` ([27e96c8](https://github.com/apify/crawlee/commit/27e96c80c26e7fc31809a4b518d699573cb8c662)), closes [#1747](https://github.com/apify/crawlee/issues/1747)
+* pin `@crawlee/*` packages versions in `crawlee` metapackage ([#2040](https://github.com/apify/crawlee/issues/2040)) ([61f91c7](https://github.com/apify/crawlee/commit/61f91c79cad38ed4415f736c4e706f27150db8ba)), closes [/github.com/apify/crawlee/pull/2002#issuecomment-1680091061](https://github.com//github.com/apify/crawlee/pull/2002/issues/issuecomment-1680091061)
+* pin all internal dependencies ([#2041](https://github.com/apify/crawlee/issues/2041)) ([d6f2b17](https://github.com/apify/crawlee/commit/d6f2b172d4a6776137c7893ca798d5b4a9408e79)), closes [#2040](https://github.com/apify/crawlee/issues/2040)
+* update playwright to 1.29.2 and make peer dep. less strict ([#1735](https://github.com/apify/crawlee/issues/1735)) ([c654fcd](https://github.com/apify/crawlee/commit/c654fcdea06fb203b7952ed97650190cc0e74394)), closes [#1723](https://github.com/apify/crawlee/issues/1723)
+* upgrade to puppeteer@19.x ([#1623](https://github.com/apify/crawlee/issues/1623)) ([ce36d6b](https://github.com/apify/crawlee/commit/ce36d6bd60c7adb113759126b3cb15ca222e94d0))
+
+
+### Features
+
+* add `utils.downloadListOfUrls` to crawlee metapackage ([7b33b0a](https://github.com/apify/crawlee/commit/7b33b0a582a75758cfca53e3ed92d6d3e392b601))
+* add `utils.parseOpenGraph()` ([#1555](https://github.com/apify/crawlee/issues/1555)) ([059f85e](https://github.com/apify/crawlee/commit/059f85ebe577888d448b196f89d0f4ec1dff371e))
+* bump puppeteer support to 17.x ([#1519](https://github.com/apify/crawlee/issues/1519)) ([b97a852](https://github.com/apify/crawlee/commit/b97a85282b64cfb6d48b0aa71f5cc79525a80295))
+* dom-crawler ([#1451](https://github.com/apify/crawlee/issues/1451)) ([ddb6cf0](https://github.com/apify/crawlee/commit/ddb6cf050fc005b2feb46d298144c8670352569c))
+* http-crawler ([#1440](https://github.com/apify/crawlee/issues/1440)) ([8c303f7](https://github.com/apify/crawlee/commit/8c303f7fd718b217cea3108409b6092711d1183b))
+* initial crawlee commit ([#1384](https://github.com/apify/crawlee/issues/1384)) ([3a59bfc](https://github.com/apify/crawlee/commit/3a59bfc0b7199b2742478dd0f8bee80d3a62f3d3))
+
+
+### Reverts
+
+* Revert "chore(release): v3.1.0" ([762d345](https://github.com/apify/crawlee/commit/762d345b48f3c308e574541e5737fe7423d55238))
+
+
+
+
+
 ## [3.10.5](https://github.com/apify/crawlee/compare/v3.10.4...v3.10.5) (2024-06-12)
 
 **Note:** Version bump only for package crawlee

@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.10.6 (2024-07-10)
+
+
+### Bug Fixes
+
+* declare missing dependency on `tslib` ([27e96c8](https://github.com/apify/crawlee/commit/27e96c80c26e7fc31809a4b518d699573cb8c662)), closes [#1747](https://github.com/apify/crawlee/issues/1747)
+* ES2022 build compatibility and move to NodeNext for module ([#2258](https://github.com/apify/crawlee/issues/2258)) ([7fe1e68](https://github.com/apify/crawlee/commit/7fe1e685904660c8446aafdf739fd1212684b48c)), closes [#2257](https://github.com/apify/crawlee/issues/2257)
+* fix building projects with TS when puppeteer and playwright are not installed ([#1404](https://github.com/apify/crawlee/issues/1404)) ([3e1218b](https://github.com/apify/crawlee/commit/3e1218b6e39b1cb94577ce438b4e88081969adc1))
+* improve dockerfiles and project templates ([7c21a64](https://github.com/apify/crawlee/commit/7c21a646360d10453f17380f9882ac52d06fedb6))
+* rename default storage folder to just `storage` ([#1403](https://github.com/apify/crawlee/issues/1403)) ([c253985](https://github.com/apify/crawlee/commit/c253985e534b5106ffa5bd8d214afae2eb34de58))
+* support headfull mode in playwright js project template ([ea2e61b](https://github.com/apify/crawlee/commit/ea2e61bc3bfcc9a895a89ad6db415a398bd3b7db))
+* support headfull mode in puppeteer js project template ([e6aceb8](https://github.com/apify/crawlee/commit/e6aceb81ed0762f25dde66ff94ccdf8c1a619f7d))
+* **templates:** added missing '@types/node' peer dependency ([#1860](https://github.com/apify/crawlee/issues/1860)) ([d37a7e2](https://github.com/apify/crawlee/commit/d37a7e2a068809df877dfd239f2500bce788eaf4))
+* **templates:** install browsers on postinstall for playwright ([#2104](https://github.com/apify/crawlee/issues/2104)) ([323768b](https://github.com/apify/crawlee/commit/323768bf335000ae2a23eaa903612cbdd73aaf0a))
+
+
+### Features
+
+* initial crawlee commit ([#1384](https://github.com/apify/crawlee/issues/1384)) ([3a59bfc](https://github.com/apify/crawlee/commit/3a59bfc0b7199b2742478dd0f8bee80d3a62f3d3))
+* make the CLI download directly from GitHub ([#1540](https://github.com/apify/crawlee/issues/1540)) ([3ff398a](https://github.com/apify/crawlee/commit/3ff398a2f114760d33c43b5bc0c2447e2e48a72e))
+
+
+### Reverts
+
+* Revert "chore(release): v3.1.0" ([762d345](https://github.com/apify/crawlee/commit/762d345b48f3c308e574541e5737fe7423d55238))
+
+
+
+
+
 ## [3.10.5](https://github.com/apify/crawlee/compare/v3.10.4...v3.10.5) (2024-06-12)
 
 **Note:** Version bump only for package @crawlee/templates

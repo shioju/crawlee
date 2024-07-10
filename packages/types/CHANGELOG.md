@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.10.6 (2024-07-10)
+
+
+### Bug Fixes
+
+* improve file saving on memory storage ([#1421](https://github.com/apify/crawlee/issues/1421)) ([75dc4bd](https://github.com/apify/crawlee/commit/75dc4bd633a8263c4e748a4fec7b4e820ce0f772))
+* **MemoryStorage:** RequestQueue#handledRequestCount should update ([#1817](https://github.com/apify/crawlee/issues/1817)) ([a775e4a](https://github.com/apify/crawlee/commit/a775e4afea20d0b31492f44b90f61b6a903491b6)), closes [#1764](https://github.com/apify/crawlee/issues/1764)
+
+
+### Features
+
+* `KeyValueStore.recordExists()` ([#2339](https://github.com/apify/crawlee/issues/2339)) ([8507a65](https://github.com/apify/crawlee/commit/8507a65d1ad079f64c752a6ddb1d8fac9b494228))
+* add basic support for `setStatusMessage` ([#1790](https://github.com/apify/crawlee/issues/1790)) ([c318980](https://github.com/apify/crawlee/commit/c318980ec11d211b1a5c9e6bdbe76198c5d895be))
+* **basic-crawler:** allow configuring the automatic status message ([#2001](https://github.com/apify/crawlee/issues/2001)) ([3eb4e4c](https://github.com/apify/crawlee/commit/3eb4e4c558b4bc0673fbff75b1db19c46004a1da))
+* initial crawlee commit ([#1384](https://github.com/apify/crawlee/issues/1384)) ([3a59bfc](https://github.com/apify/crawlee/commit/3a59bfc0b7199b2742478dd0f8bee80d3a62f3d3))
+* **MemoryStorage:** read from fs if persistStorage is enabled, ram only otherwise ([#1761](https://github.com/apify/crawlee/issues/1761)) ([e903980](https://github.com/apify/crawlee/commit/e9039809a0c0af0bc086be1f1400d18aa45ae490))
+* move the status message implementation to Crawlee, noop in storage ([#1808](https://github.com/apify/crawlee/issues/1808)) ([99c3fdc](https://github.com/apify/crawlee/commit/99c3fdc18030b7898e6b6d149d6d94fab7881f09))
+* RQv2 memory storage support ([#1874](https://github.com/apify/crawlee/issues/1874)) ([049486b](https://github.com/apify/crawlee/commit/049486b772cc2accd2d2d226d8c8726e5ab933a9))
+
+
+### Reverts
+
+* Revert "chore(release): v3.1.0" ([762d345](https://github.com/apify/crawlee/commit/762d345b48f3c308e574541e5737fe7423d55238))
+
+
+
+
+
 ## [3.10.5](https://github.com/apify/crawlee/compare/v3.10.4...v3.10.5) (2024-06-12)
 
 **Note:** Version bump only for package @crawlee/types

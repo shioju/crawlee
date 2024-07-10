@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.10.6 (2024-07-10)
+
+
+### Bug Fixes
+
+* declare missing dependency on `tslib` ([27e96c8](https://github.com/apify/crawlee/commit/27e96c80c26e7fc31809a4b518d699573cb8c662)), closes [#1747](https://github.com/apify/crawlee/issues/1747)
+* declare missing peer dependencies in `@crawlee/browser` package ([#2532](https://github.com/apify/crawlee/issues/2532)) ([3357c7f](https://github.com/apify/crawlee/commit/3357c7fc5ab071b12f72097c190dbee9990e3751))
+* ignore invalid URLs in `enqueueLinks` in browser crawlers ([#1803](https://github.com/apify/crawlee/issues/1803)) ([5ac336c](https://github.com/apify/crawlee/commit/5ac336c5b83b212fd6281659b8ceee091e259ff1))
+* **jsdom:** add timeout to the window.load wait when `runScripts` are enabled ([806de31](https://github.com/apify/crawlee/commit/806de31222e138ef2d8e2706536a7288423be3d4))
+* **jsdom:** delay closing of the window and add some polyfills ([2e81618](https://github.com/apify/crawlee/commit/2e81618afb5f3890495e3e5fcfa037eb3319edc9))
+* **jsdom:** use no-op `enqueueLinks` in http crawlers when parsing fails ([fd35270](https://github.com/apify/crawlee/commit/fd35270e7da67a77eb60108e19294f0fd2016706))
+* pin all internal dependencies ([#2041](https://github.com/apify/crawlee/issues/2041)) ([d6f2b17](https://github.com/apify/crawlee/commit/d6f2b172d4a6776137c7893ca798d5b4a9408e79)), closes [#2040](https://github.com/apify/crawlee/issues/2040)
+
+
+### Features
+
+* add `waitForSelector` context helper + `parseWithCheerio` in adaptive crawler ([#2522](https://github.com/apify/crawlee/issues/2522)) ([6f88e73](https://github.com/apify/crawlee/commit/6f88e738d43ab4774dc4ef3f78775a5d88728e0d))
+* hideInternalConsole in JSDOMCrawler ([#1707](https://github.com/apify/crawlee/issues/1707)) ([8975f90](https://github.com/apify/crawlee/commit/8975f9088cf4dd38629c21e21061616fc1e7b003))
+* **HttpCrawler:** add `parseWithCheerio` helper to `HttpCrawler` ([#1906](https://github.com/apify/crawlee/issues/1906)) ([ff5f76f](https://github.com/apify/crawlee/commit/ff5f76f9336c47c555c28038cdc72dc650bb5065))
+* **jsdom-crawler:** add runScripts option ([#1668](https://github.com/apify/crawlee/issues/1668)) ([8ef90bc](https://github.com/apify/crawlee/commit/8ef90bc1c020ddee334dd9a9267f6b6298a27024))
+* **jsdom,linkedom:** Expose document to crawler router context ([#1950](https://github.com/apify/crawlee/issues/1950)) ([4536dc2](https://github.com/apify/crawlee/commit/4536dc2900ee6d0acb562583ed8fca183df28e39))
+* **jsdom:** add `parseWithCheerio` context helper ([c8f0796](https://github.com/apify/crawlee/commit/c8f0796aebc0dfa6e6d04740a0bb7d8ddd5b2d96))
+* Request Queue v2 ([#1975](https://github.com/apify/crawlee/issues/1975)) ([70a77ee](https://github.com/apify/crawlee/commit/70a77ee15f984e9ae67cd584fc58ace7e55346db)), closes [#1365](https://github.com/apify/crawlee/issues/1365)
+* **router:** allow inline router definition ([#1877](https://github.com/apify/crawlee/issues/1877)) ([2d241c9](https://github.com/apify/crawlee/commit/2d241c9f88964ebd41a181069c378b6b7b5bf262))
+
+
+### Reverts
+
+* Revert "chore(release): v3.1.0" ([762d345](https://github.com/apify/crawlee/commit/762d345b48f3c308e574541e5737fe7423d55238))
+
+
+
+
+
 ## [3.10.5](https://github.com/apify/crawlee/compare/v3.10.4...v3.10.5) (2024-06-12)
 
 

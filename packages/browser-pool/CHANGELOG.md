@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.10.6 (2024-07-10)
+
+
+### Bug Fixes
+
+* `enqueueLinks` should respect full URL of the current request for relative link resolution ([#1427](https://github.com/apify/crawlee/issues/1427)) ([e72d02c](https://github.com/apify/crawlee/commit/e72d02c1e7c4d871914956d3e5c025b1a82ce12c))
+* allow to use any version of puppeteer or playwright ([#2102](https://github.com/apify/crawlee/issues/2102)) ([0cafceb](https://github.com/apify/crawlee/commit/0cafceb2966d430dd1b2a1b619fe66da1c951f4c)), closes [#2101](https://github.com/apify/crawlee/issues/2101)
+* **browser-pool:** improve error handling when browser is not found ([#2050](https://github.com/apify/crawlee/issues/2050)) ([282527f](https://github.com/apify/crawlee/commit/282527f31bb366a4e52463212f652dcf6679b6c3)), closes [#1459](https://github.com/apify/crawlee/issues/1459)
+* **browser-pool:** respect user options before assigning fingerpints ([#2190](https://github.com/apify/crawlee/issues/2190)) ([f050776](https://github.com/apify/crawlee/commit/f050776a916a0530aca6727a447a49252e643417)), closes [#2164](https://github.com/apify/crawlee/issues/2164)
+* **BrowserPool:** ignore `--no-sandbox` flag for webkit launcher ([#2148](https://github.com/apify/crawlee/issues/2148)) ([1eb2f08](https://github.com/apify/crawlee/commit/1eb2f08a3cdead5dd21ffde4162d403175a4594c)), closes [#1797](https://github.com/apify/crawlee/issues/1797)
+* fix building projects with TS when puppeteer and playwright are not installed ([#1404](https://github.com/apify/crawlee/issues/1404)) ([3e1218b](https://github.com/apify/crawlee/commit/3e1218b6e39b1cb94577ce438b4e88081969adc1))
+* fix detection of older puppeteer versions ([890669b](https://github.com/apify/crawlee/commit/890669b0b3eef94d00ad69aa022e13b3109a660c)), closes [#2370](https://github.com/apify/crawlee/issues/2370)
+* increase timeout for retiring inactive browsers ([#2523](https://github.com/apify/crawlee/issues/2523)) ([195f176](https://github.com/apify/crawlee/commit/195f1766a03293db19caa33f9fc3d4ab08081f71))
+* pin all internal dependencies ([#2041](https://github.com/apify/crawlee/issues/2041)) ([d6f2b17](https://github.com/apify/crawlee/commit/d6f2b172d4a6776137c7893ca798d5b4a9408e79)), closes [#2040](https://github.com/apify/crawlee/issues/2040)
+* provide more detailed error messages for browser launch errors ([#2157](https://github.com/apify/crawlee/issues/2157)) ([f188ebe](https://github.com/apify/crawlee/commit/f188ebe0b4ae7594225ef37d8160d175d4535ccd))
+* **puppeteer:** add 'process' to the browser bound methods ([#2329](https://github.com/apify/crawlee/issues/2329)) ([2750ba6](https://github.com/apify/crawlee/commit/2750ba646ef3c1d51eacdd8e7d67be0e14fb2a97))
+* **puppeteer:** improve detection of older versions ([98d4e86](https://github.com/apify/crawlee/commit/98d4e8664a54c1a134446a1b6ab9042d14ed8629))
+* **puppeteer:** support `puppeteer@v22` ([#2337](https://github.com/apify/crawlee/issues/2337)) ([3cc360a](https://github.com/apify/crawlee/commit/3cc360a1ea94147133f9785d65834f360f7b42a7))
+* remove trailing slash for proxyUrl ([#1405](https://github.com/apify/crawlee/issues/1405)) ([b57ad76](https://github.com/apify/crawlee/commit/b57ad763c8db82bfa013f1caaf8152516922c32c))
+* support TypeScript 4.8 ([#1507](https://github.com/apify/crawlee/issues/1507)) ([4c3a504](https://github.com/apify/crawlee/commit/4c3a5045931a7f270bf8eda8a6417466b32fc99b))
+* type errors when `playwright` is not installed ([#1637](https://github.com/apify/crawlee/issues/1637)) ([de9db0c](https://github.com/apify/crawlee/commit/de9db0c2b24019d2e1dd43206dd7f149ecdc679a))
+* update playwright to 1.29.2 and make peer dep. less strict ([#1735](https://github.com/apify/crawlee/issues/1735)) ([c654fcd](https://github.com/apify/crawlee/commit/c654fcdea06fb203b7952ed97650190cc0e74394)), closes [#1723](https://github.com/apify/crawlee/issues/1723)
+* upgrade to puppeteer@19.x ([#1623](https://github.com/apify/crawlee/issues/1623)) ([ce36d6b](https://github.com/apify/crawlee/commit/ce36d6bd60c7adb113759126b3cb15ca222e94d0))
+
+
+### Features
+
+* `browserPerProxy` browser launch option ([#2418](https://github.com/apify/crawlee/issues/2418)) ([df57b29](https://github.com/apify/crawlee/commit/df57b2965ac8c8b3adf807e3bad8a649814fa213))
+* `tieredProxyUrls` for ProxyConfiguration ([#2348](https://github.com/apify/crawlee/issues/2348)) ([5408c7f](https://github.com/apify/crawlee/commit/5408c7f60a5bf4dbdba92f2d7440e0946b94ea6e))
+* better `newUrlFunction` for ProxyConfiguration ([#2392](https://github.com/apify/crawlee/issues/2392)) ([330598b](https://github.com/apify/crawlee/commit/330598b348ad27bc7c73732294a14b655ccd3507)), closes [#2348](https://github.com/apify/crawlee/issues/2348) [#2065](https://github.com/apify/crawlee/issues/2065)
+* bump puppeteer support to 17.x ([#1519](https://github.com/apify/crawlee/issues/1519)) ([b97a852](https://github.com/apify/crawlee/commit/b97a85282b64cfb6d48b0aa71f5cc79525a80295))
+* enable tab-as-a-container for Firefox ([#1456](https://github.com/apify/crawlee/issues/1456)) ([ae5ba4f](https://github.com/apify/crawlee/commit/ae5ba4f15fd6d14f444486234753ce1781c74cc8))
+* initial crawlee commit ([#1384](https://github.com/apify/crawlee/issues/1384)) ([3a59bfc](https://github.com/apify/crawlee/commit/3a59bfc0b7199b2742478dd0f8bee80d3a62f3d3))
+* **jsdom-crawler:** add runScripts option ([#1668](https://github.com/apify/crawlee/issues/1668)) ([8ef90bc](https://github.com/apify/crawlee/commit/8ef90bc1c020ddee334dd9a9267f6b6298a27024))
+* **puppeteer:** enable `new` headless mode ([#1910](https://github.com/apify/crawlee/issues/1910)) ([7fc999c](https://github.com/apify/crawlee/commit/7fc999cf4658ca69b97f16d434444081998470f4))
+* tab as a container + proxy per page ([#1417](https://github.com/apify/crawlee/issues/1417)) ([71a755d](https://github.com/apify/crawlee/commit/71a755de4ef0b9f9db2efd94bd41b186b7fc05b8))
+
+
+### Reverts
+
+* Revert "chore(release): v3.1.0" ([762d345](https://github.com/apify/crawlee/commit/762d345b48f3c308e574541e5737fe7423d55238))
+
+
+
+
+
 ## [3.10.5](https://github.com/apify/crawlee/compare/v3.10.4...v3.10.5) (2024-06-12)
 
 **Note:** Version bump only for package @crawlee/browser-pool

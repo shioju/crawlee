@@ -3,6 +3,92 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.10.6 (2024-07-10)
+
+
+### Bug Fixes
+
+* `EnqueueStrategy.All` erroring with links using unsupported protocols ([#2389](https://github.com/apify/crawlee/issues/2389)) ([8db3908](https://github.com/apify/crawlee/commit/8db39080b7711ba3c27dff7fce1170ddb0ee3d05))
+* add missing `useState` implementation into crawling context ([eec4a71](https://github.com/apify/crawlee/commit/eec4a71769f1236ca0876a4a32288241b1b63db1))
+* add warning when we detect use of RL and RQ, but RQ is not provided explicitly ([#2115](https://github.com/apify/crawlee/issues/2115)) ([6fb1c55](https://github.com/apify/crawlee/commit/6fb1c5568a0bf3b6fa38045161866a32b13310ca)), closes [#1773](https://github.com/apify/crawlee/issues/1773)
+* **basic-crawler:** handle `request.noRetry` after `errorHandler` ([#1542](https://github.com/apify/crawlee/issues/1542)) ([2a2040e](https://github.com/apify/crawlee/commit/2a2040e13209aff5e64ee47194940182b686b3a7))
+* **basic-crawler:** limit `internalTimeoutMillis` in addition to `requestHandlerTimeoutMillis` ([#1981](https://github.com/apify/crawlee/issues/1981)) ([8122622](https://github.com/apify/crawlee/commit/8122622c3054a0e0e0c1869ba462276cbead8090)), closes [#1766](https://github.com/apify/crawlee/issues/1766)
+* **browser-pool:** improve error handling when browser is not found ([#2050](https://github.com/apify/crawlee/issues/2050)) ([282527f](https://github.com/apify/crawlee/commit/282527f31bb366a4e52463212f652dcf6679b6c3)), closes [#1459](https://github.com/apify/crawlee/issues/1459)
+* clean up `inProgress` cache when delaying requests via `sameDomainDelaySecs` ([#2045](https://github.com/apify/crawlee/issues/2045)) ([f63ccc0](https://github.com/apify/crawlee/commit/f63ccc018c9e9046531287c47d11283a8e71a6ad))
+* concurrency option override order ([#1649](https://github.com/apify/crawlee/issues/1649)) ([7bbad03](https://github.com/apify/crawlee/commit/7bbad0380cd6de3fdca79ba57e1fef1d22bd56f8))
+* cookie monster is no more ([#1414](https://github.com/apify/crawlee/issues/1414)) ([a361147](https://github.com/apify/crawlee/commit/a361147dd711b74221c631c0ced9daaefc19d0f0))
+* declare missing dependencies on `csv-stringify` and `fs-extra` ([#2326](https://github.com/apify/crawlee/issues/2326)) ([718959d](https://github.com/apify/crawlee/commit/718959dbbe1fa69f948d0b778d0f54d9c493ab25)), closes [/github.com/redabacha/crawlee/blob/2f05ed22b203f688095300400bb0e6d03a03283c/.eslintrc.json#L50](https://github.com//github.com/redabacha/crawlee/blob/2f05ed22b203f688095300400bb0e6d03a03283c/.eslintrc.json/issues/L50)
+* declare missing dependency on `tslib` ([27e96c8](https://github.com/apify/crawlee/commit/27e96c80c26e7fc31809a4b518d699573cb8c662)), closes [#1747](https://github.com/apify/crawlee/issues/1747)
+* do not drop statistics on migration/resurrection/resume ([#2462](https://github.com/apify/crawlee/issues/2462)) ([8ce7dd4](https://github.com/apify/crawlee/commit/8ce7dd4ae6a3718dac95e784a53bd5661c827edc))
+* do not hide stack trace of (retried) Type/Syntax/ReferenceErrors ([469b4b5](https://github.com/apify/crawlee/commit/469b4b58f1c19699d05da84f5f09a95d682421f0))
+* don't call `notify` in `addRequests()` ([#2425](https://github.com/apify/crawlee/issues/2425)) ([c4d5446](https://github.com/apify/crawlee/commit/c4d54469120648a592b6898f849154fda60e3d59)), closes [#2421](https://github.com/apify/crawlee/issues/2421)
+* ensure the status message cannot stuck the crawler ([#2114](https://github.com/apify/crawlee/issues/2114)) ([9034f08](https://github.com/apify/crawlee/commit/9034f08106f53a70205695076e874f04f632c5bb))
+* injectJQuery in context does not survive navs ([#1661](https://github.com/apify/crawlee/issues/1661)) ([493a7cf](https://github.com/apify/crawlee/commit/493a7cff569cb12cfd9aa5e0f4fcb9de686eb41f))
+* make `crawler.log` publicly accessible ([#2526](https://github.com/apify/crawlee/issues/2526)) ([3e9e665](https://github.com/apify/crawlee/commit/3e9e6652c0b5e4d0c2707985abbad7d80336b9af))
+* mark `context.request.loadedUrl` and `id` as required inside the request handler ([#2531](https://github.com/apify/crawlee/issues/2531)) ([2b54660](https://github.com/apify/crawlee/commit/2b546600691d84852a2f9ef42f273cecf818d66d))
+* mark session as bad on failed requests ([#1647](https://github.com/apify/crawlee/issues/1647)) ([445ae43](https://github.com/apify/crawlee/commit/445ae4321816bc418a83c02fb52e64df96bfb0a9))
+* notify autoscaled pool about newly added requests ([#2400](https://github.com/apify/crawlee/issues/2400)) ([a90177d](https://github.com/apify/crawlee/commit/a90177d5207794be1d6e401d746dd4c6e5961976))
+* pin all internal dependencies ([#2041](https://github.com/apify/crawlee/issues/2041)) ([d6f2b17](https://github.com/apify/crawlee/commit/d6f2b172d4a6776137c7893ca798d5b4a9408e79)), closes [#2040](https://github.com/apify/crawlee/issues/2040)
+* remove memory leaks from migration event handling ([#1679](https://github.com/apify/crawlee/issues/1679)) ([49bba25](https://github.com/apify/crawlee/commit/49bba252ebc348b61eac3895155361f7d394db36)), closes [#1670](https://github.com/apify/crawlee/issues/1670)
+* rename interface `FailedRequestHandler` to `ErrorHandler` ([#1410](https://github.com/apify/crawlee/issues/1410)) ([c5b74c6](https://github.com/apify/crawlee/commit/c5b74c6a741fc789e8a0b486aed17067783b0826))
+* respect `crawler.log` when creating child logger for `Statistics` ([0a0d75d](https://github.com/apify/crawlee/commit/0a0d75d40b5f78b329589535bbe3e0e84be76a7e)), closes [#2412](https://github.com/apify/crawlee/issues/2412)
+* respect config object when creating `SessionPool` ([#1881](https://github.com/apify/crawlee/issues/1881)) ([db069df](https://github.com/apify/crawlee/commit/db069df80bc183c6b861c9ac82f1e278e57ea92b))
+* respect current config when creating implicit `RequestQueue` instance ([845141d](https://github.com/apify/crawlee/commit/845141d921c10dd5fb121a499bb1b24f5eb3ff04)), closes [#2043](https://github.com/apify/crawlee/issues/2043)
+* RQ request count is consistent after migration ([#2116](https://github.com/apify/crawlee/issues/2116)) ([9ab8c18](https://github.com/apify/crawlee/commit/9ab8c1874f52acc3f0337fdabd36321d0fb40b86)), closes [#1855](https://github.com/apify/crawlee/issues/1855) [#1855](https://github.com/apify/crawlee/issues/1855)
+* sendRequest types ([#1445](https://github.com/apify/crawlee/issues/1445)) ([751563b](https://github.com/apify/crawlee/commit/751563b4f692e91e64303ecee793ff131b2f835b))
+* session pool leaks memory on multiple crawler runs ([#2083](https://github.com/apify/crawlee/issues/2083)) ([b96582a](https://github.com/apify/crawlee/commit/b96582a200e25ec11124da1f7f84a2b16b64d133)), closes [#2074](https://github.com/apify/crawlee/issues/2074) [#2031](https://github.com/apify/crawlee/issues/2031)
+* session.markBad() on requestHandler error ([#1709](https://github.com/apify/crawlee/issues/1709)) ([e87eb1f](https://github.com/apify/crawlee/commit/e87eb1f2ccd9585f8d53cb03ec671cedf23a06b4)), closes [#1635](https://github.com/apify/crawlee/issues/1635) [/github.com/apify/crawlee/blob/5ff04faa85c3a6b6f02cd58a91b46b80610d8ae6/packages/browser-crawler/src/internals/browser-crawler.ts#L524](https://github.com//github.com/apify/crawlee/blob/5ff04faa85c3a6b6f02cd58a91b46b80610d8ae6/packages/browser-crawler/src/internals/browser-crawler.ts/issues/L524)
+* set status message every 5 seconds and log it via debug level ([#1918](https://github.com/apify/crawlee/issues/1918)) ([32aede6](https://github.com/apify/crawlee/commit/32aede6bbaa25b402e6e9cee9d3aa44722b1cfd0))
+* start status message logger after the crawl actually starts ([5d1df7a](https://github.com/apify/crawlee/commit/5d1df7aae00d0d6ca29338723f92b77cff667354))
+* status message - total requests ([#1842](https://github.com/apify/crawlee/issues/1842)) ([710f734](https://github.com/apify/crawlee/commit/710f7347623619057e99abf539f0ccf78de41bbc))
+* wait for storage to finish before resolving `crawler.run()` ([9d62d56](https://github.com/apify/crawlee/commit/9d62d565c2ff8d058164c22333b07b7d2bf79ee0))
+
+
+### Features
+
+* `tieredProxyUrls` for ProxyConfiguration ([#2348](https://github.com/apify/crawlee/issues/2348)) ([5408c7f](https://github.com/apify/crawlee/commit/5408c7f60a5bf4dbdba92f2d7440e0946b94ea6e))
+* accessing crawler state, key-value store and named datasets via crawling context ([#2283](https://github.com/apify/crawlee/issues/2283)) ([58dd5fc](https://github.com/apify/crawlee/commit/58dd5fcc25f31bb066402c46e48a9e5e91efd5c5))
+* adaptive playwright crawler ([#2316](https://github.com/apify/crawlee/issues/2316)) ([8e4218a](https://github.com/apify/crawlee/commit/8e4218ada03cf485751def46f8c465b2d2a825c7))
+* add `keepAlive` to crawler options ([#1452](https://github.com/apify/crawlee/issues/1452)) ([084b6b2](https://github.com/apify/crawlee/commit/084b6b2e782ceae466e5c8f59924278535450ab9))
+* add `RetryRequestError` + add error to the context for BC ([#1443](https://github.com/apify/crawlee/issues/1443)) ([1a54171](https://github.com/apify/crawlee/commit/1a5417169e1e24a5f1b30b7850150339b8544b6b))
+* add basic support for `setStatusMessage` ([#1790](https://github.com/apify/crawlee/issues/1790)) ([c318980](https://github.com/apify/crawlee/commit/c318980ec11d211b1a5c9e6bdbe76198c5d895be))
+* add support for `sameDomainDelay` ([#2003](https://github.com/apify/crawlee/issues/2003)) ([e796883](https://github.com/apify/crawlee/commit/e79688324790e5d07fc11192769cf051617e96e4)), closes [#1993](https://github.com/apify/crawlee/issues/1993)
+* allow configuring crawler statistics ([#2213](https://github.com/apify/crawlee/issues/2213)) ([9fd60e4](https://github.com/apify/crawlee/commit/9fd60e4036dce720c71f2d169a8eccbc4c813a96)), closes [#1789](https://github.com/apify/crawlee/issues/1789)
+* allow running single crawler instance multiple times ([#1844](https://github.com/apify/crawlee/issues/1844)) ([9e6eb1e](https://github.com/apify/crawlee/commit/9e6eb1e32f582a8837311aac12cc1d657432f3fa)), closes [#765](https://github.com/apify/crawlee/issues/765)
+* always show error origin if inside the userland ([#1677](https://github.com/apify/crawlee/issues/1677)) ([bbe9045](https://github.com/apify/crawlee/commit/bbe9045d550f95138d570522f6f469eae2d146d0))
+* **basic-crawler:** allow configuring the automatic status message ([#2001](https://github.com/apify/crawlee/issues/2001)) ([3eb4e4c](https://github.com/apify/crawlee/commit/3eb4e4c558b4bc0673fbff75b1db19c46004a1da))
+* check enqueue link strategy post redirect ([#2238](https://github.com/apify/crawlee/issues/2238)) ([3c5f9d6](https://github.com/apify/crawlee/commit/3c5f9d6056158e042e12d75b2b1b21ef6c32e618)), closes [#2173](https://github.com/apify/crawlee/issues/2173)
+* **core:** add `crawler.exportData()` helper ([#2166](https://github.com/apify/crawlee/issues/2166)) ([c8c09a5](https://github.com/apify/crawlee/commit/c8c09a54a712689969ff1f6bddf70f12a2a22670))
+* **core:** add `Request.maxRetries` to allow overriding the `maxRequestRetries` ([#1925](https://github.com/apify/crawlee/issues/1925)) ([c5592db](https://github.com/apify/crawlee/commit/c5592db0f8094de27c46ad993bea2c1ab1f61385))
+* **core:** add `RequestQueue.addRequestsBatched()` that is non-blocking ([#1996](https://github.com/apify/crawlee/issues/1996)) ([c85485d](https://github.com/apify/crawlee/commit/c85485d6ca2bb61cfebb24a2ad99e0b3ba5c069b)), closes [#1995](https://github.com/apify/crawlee/issues/1995)
+* **core:** add default dataset helpers to `BasicCrawler` ([#2057](https://github.com/apify/crawlee/issues/2057)) ([e2a7544](https://github.com/apify/crawlee/commit/e2a7544ddf775db023ca25553d21cb73484fcd8c))
+* don't close page before calling errorHandler ([#1548](https://github.com/apify/crawlee/issues/1548)) ([1c8cd82](https://github.com/apify/crawlee/commit/1c8cd82611e93e4991b49b8ba2f1842457875680))
+* enable migration testing ([#1583](https://github.com/apify/crawlee/issues/1583)) ([ee3a68f](https://github.com/apify/crawlee/commit/ee3a68fff1fcdf941c9a1d3734107635e9a12049))
+* error tracker ([#1467](https://github.com/apify/crawlee/issues/1467)) ([6bfe1ce](https://github.com/apify/crawlee/commit/6bfe1ce0161f1e26f97e2b8e5c02ec9ca608fe30))
+* exceeding maxSessionRotations calls failedRequestHandler ([#2029](https://github.com/apify/crawlee/issues/2029)) ([b1cb108](https://github.com/apify/crawlee/commit/b1cb108882ab28d956adfc3d77ba9813507823f6)), closes [#2028](https://github.com/apify/crawlee/issues/2028)
+* got-scraping v4 ([#2110](https://github.com/apify/crawlee/issues/2110)) ([2f05ed2](https://github.com/apify/crawlee/commit/2f05ed22b203f688095300400bb0e6d03a03283c))
+* implement ErrorSnapshotter for error context capture ([#2332](https://github.com/apify/crawlee/issues/2332)) ([e861dfd](https://github.com/apify/crawlee/commit/e861dfdb451ae32fb1e0c7749c6b59744654b303)), closes [#2280](https://github.com/apify/crawlee/issues/2280)
+* initial crawlee commit ([#1384](https://github.com/apify/crawlee/issues/1384)) ([3a59bfc](https://github.com/apify/crawlee/commit/3a59bfc0b7199b2742478dd0f8bee80d3a62f3d3))
+* log cause with `retryOnBlocked` ([#2252](https://github.com/apify/crawlee/issues/2252)) ([e19a773](https://github.com/apify/crawlee/commit/e19a773693cfc5e65c1e2321bfc8b73c9844ea8b)), closes [#2249](https://github.com/apify/crawlee/issues/2249)
+* log desired concurrency in the default status message ([9f0b796](https://github.com/apify/crawlee/commit/9f0b79684d9e27e6ba29634e7da2e9a095367eda))
+* make `RequestQueue` v2 the default queue, see more on [Apify blog](https://blog.apify.com/new-apify-request-queue/) ([#2390](https://github.com/apify/crawlee/issues/2390)) ([41ae8ab](https://github.com/apify/crawlee/commit/41ae8abec1da811ae0750ac2d298e77c1e3b7b55)), closes [#2388](https://github.com/apify/crawlee/issues/2388)
+* move the status message implementation to Crawlee, noop in storage ([#1808](https://github.com/apify/crawlee/issues/1808)) ([99c3fdc](https://github.com/apify/crawlee/commit/99c3fdc18030b7898e6b6d149d6d94fab7881f09))
+* remove side effect from the deprecated error context augmentation ([#2069](https://github.com/apify/crawlee/issues/2069)) ([f9fb5c4](https://github.com/apify/crawlee/commit/f9fb5c42ecb14f8d0845a15982d204bd2b5b228f))
+* Request Queue v2 ([#1975](https://github.com/apify/crawlee/issues/1975)) ([70a77ee](https://github.com/apify/crawlee/commit/70a77ee15f984e9ae67cd584fc58ace7e55346db)), closes [#1365](https://github.com/apify/crawlee/issues/1365)
+* retire session on proxy error ([#2002](https://github.com/apify/crawlee/issues/2002)) ([8c0928b](https://github.com/apify/crawlee/commit/8c0928b24ceabefc454f8114ac30a27023709010)), closes [#1912](https://github.com/apify/crawlee/issues/1912)
+* retryOnBlocked detects blocked webpage ([#1956](https://github.com/apify/crawlee/issues/1956)) ([766fa9b](https://github.com/apify/crawlee/commit/766fa9b88029e9243a7427075384c1abe85c70c8))
+* **router:** allow inline router definition ([#1877](https://github.com/apify/crawlee/issues/1877)) ([2d241c9](https://github.com/apify/crawlee/commit/2d241c9f88964ebd41a181069c378b6b7b5bf262))
+* Sitemap-based request list implementation ([#2498](https://github.com/apify/crawlee/issues/2498)) ([7bf8f0b](https://github.com/apify/crawlee/commit/7bf8f0bcd4cc81e02c7cc60e82dfe7a0cdd80938))
+
+
+### Reverts
+
+* Revert "chore(release): v3.1.0" ([762d345](https://github.com/apify/crawlee/commit/762d345b48f3c308e574541e5737fe7423d55238))
+
+
+
+
+
 ## [3.10.5](https://github.com/apify/crawlee/compare/v3.10.4...v3.10.5) (2024-06-12)
 
 
