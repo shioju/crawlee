@@ -138,7 +138,7 @@ jobs:
               run: yarn lerna version ${{ github.event.inputs.custom_version }} --force-publish --yes
               env:
                   NPM_TOKEN: ${{ secrets.APIFY_SERVICE_ACCOUNT_NPM_TOKEN }}
-                  GIT_USER: 'noreply@apify.com:${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}'
+                  GIT_USER: 'shioju12@gmail.com:${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}'
                   GH_TOKEN: ${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}
 
             - name: Bump version to ${{ github.event.inputs.version }} version
@@ -146,7 +146,7 @@ jobs:
               run: yarn lerna version ${{ github.event.inputs.version }} --force-publish --yes
               env:
                   NPM_TOKEN: ${{ secrets.APIFY_SERVICE_ACCOUNT_NPM_TOKEN }}
-                  GIT_USER: 'noreply@apify.com:${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}'
+                  GIT_USER: 'shioju12@gmail.com:${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}'
                   GH_TOKEN: ${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}
 
             - name: Pin versions in internal dependencies and update lockfile
@@ -161,7 +161,7 @@ jobs:
               run: yarn publish:prod --yes --no-verify-access
               env:
                   NPM_TOKEN: ${{ secrets.APIFY_SERVICE_ACCOUNT_NPM_TOKEN }}
-                  GIT_USER: 'noreply@apify.com:${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}'
+                  GIT_USER: 'shioju12@gmail.com:${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}'
                   GH_TOKEN: ${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}
 
             - name: Trigger Docker image builds
@@ -219,7 +219,7 @@ jobs:
         - name: Commit and push the version snapshot
           run: |
               git config --global user.name "Apify Release Bot"
-              git config --global user.email "noreply@apify.com"
+              git config --global user.email "shioju12@gmail.com"
               git add .
               git diff-index --quiet HEAD || git commit -m 'chore(release): update docs for ${{ inputs.version }} version [skip ci]'
               git push
